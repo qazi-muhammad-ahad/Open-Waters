@@ -1,0 +1,7 @@
+{
+  "name": "OpenWaters.EditMode",
+  "rootNamespace": "OpenWaters.Tests",
+  "references": ["OpenWaters.Runtime"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

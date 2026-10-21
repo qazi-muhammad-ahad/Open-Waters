@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Open Waters</title>
+  <link rel="icon" type="image/png" href="Logo.png">
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#091f2b;color:#e4f5f5;font-family:system-ui,sans-serif}
+    canvas{display:block;width:100vw;height:100vh;outline:none}#loading{position:fixed;inset:0;display:grid;place-content:center;text-align:center;background:#091f2b;gap:18px}
+    #loading img{width:128px;height:128px;margin:auto}h1{font-size:24px;letter-spacing:.14em;margin:0;color:#f5b848}p{margin:0;font-size:15px;color:#a5c4ca}
+    progress{width:240px;height:8px;accent-color:#f5b848;border:0}#error{max-width:520px;padding:24px;color:#ffc4b9;white-space:pre-wrap}
+    #fullscreen{position:fixed;right:20px;top:110px;width:40px;height:38px;border:1px solid #789aa6;border-radius:10px;background:#102b36;color:#e4f5f5;font-size:24px;cursor:pointer;display:none}
+    #fullscreen:focus-visible{outline:3px solid #65f1d5}
+  </style>
+</head>
+<body>
+  <canvas id="unity-canvas" tabindex="0" aria-label="Open Waters game"></canvas>
+  <div id="loading"><img src="Logo.png" alt="Open Waters"><h1>OPEN WATERS</h1><p>Opening your port…</p><progress max="1" value="0" aria-label="Loading game"></progress><p id="error" hidden></p></div>
+  <button id="fullscreen" aria-label="Enter fullscreen" title="Fullscreen">⛶</button>
+  <script src="Build/{{{ LOADER_FILENAME }}}"></script>
+  <script>
+    const canvas=document.querySelector('#unity-canvas');
+    const loading=document.querySelector('#loading');
+    const progress=document.querySelector('progress');
+    function showError(message){const error=document.querySelector('#error');error.textContent=String(message);error.hidden=false;loading.style.display='grid';}
+    createUnityInstance(canvas,{
+      arguments:[],
+      dataUrl:'Build/{{{ DATA_FILENAME }}}',
+      frameworkUrl:'Build/{{{ FRAMEWORK_FILENAME }}}',
+#if USE_THREADS
+      workerUrl:'Build/{{{ WORKER_FILENAME }}}',
+#endif
+#if USE_WASM
+      codeUrl:'Build/{{{ CODE_FILENAME }}}',
+#endif
+#if SYMBOLS_FILENAME
+      symbolsUrl:'Build/{{{ SYMBOLS_FILENAME }}}',
+#endif
+      streamingAssetsUrl:'StreamingAssets',
+      companyName:{{{ JSON.stringify(COMPANY_NAME) }}},
+      productName:{{{ JSON.stringify(PRODUCT_NAME) }}},
+      productVersion:{{{ JSON.stringify(PRODUCT_VERSION) }}},
+      autoSyncPersistentDataPath:true,
+      showBanner:(message,type)=>{if(type==='error')showError(message);else console.warn(message);}
+    },value=>{progress.value=value;}).then(instance=>{
+      loading.style.display='none';canvas.focus();
+      const fullscreen=document.querySelector('#fullscreen');fullscreen.style.display='block';
+      fullscreen.onclick=()=>{instance.SetFullscreen(1);canvas.focus();};
+    }).catch(showError);
+  </script>
+</body>
+</html>

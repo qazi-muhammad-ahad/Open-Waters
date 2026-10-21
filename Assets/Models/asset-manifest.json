@@ -1,0 +1,873 @@
+{
+  "schema": 1,
+  "seed": 2701,
+  "units": "metres",
+  "sourceUp": "Z",
+  "sourceShipForward": "-Y",
+  "assets": [
+    {
+      "name": "Dock_T1",
+      "group": "Dock",
+      "fbx": "Dock/Dock_T1.fbx",
+      "source": "Dock/Sources~/Dock_T1.blend",
+      "triangles": 3664,
+      "vertices": 1904,
+      "dimensionsBlenderXYZ": [
+        5.9,
+        5.237,
+        1.815
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Warehouse_T1",
+      "group": "Warehouse",
+      "fbx": "Warehouse/Warehouse_T1.fbx",
+      "source": "Warehouse/Sources~/Warehouse_T1.blend",
+      "triangles": 4652,
+      "vertices": 2414,
+      "dimensionsBlenderXYZ": [
+        4.62,
+        3.981,
+        3.825
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Fuel_T1",
+      "group": "Fuel",
+      "fbx": "Fuel/Fuel_T1.fbx",
+      "source": "Fuel/Sources~/Fuel_T1.blend",
+      "triangles": 1016,
+      "vertices": 532,
+      "dimensionsBlenderXYZ": [
+        3.12,
+        3.12,
+        2.56
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Office_T1",
+      "group": "Office",
+      "fbx": "Office/Office_T1.fbx",
+      "source": "Office/Sources~/Office_T1.blend",
+      "triangles": 4062,
+      "vertices": 2114,
+      "dimensionsBlenderXYZ": [
+        3.795,
+        3.87,
+        3.855
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "Repair_T1",
+      "group": "Repair",
+      "fbx": "Repair/Repair_T1.fbx",
+      "source": "Repair/Sources~/Repair_T1.blend",
+      "triangles": 2252,
+      "vertices": 1168,
+      "dimensionsBlenderXYZ": [
+        4.62,
+        3.62,
+        1.384
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Dock_T2",
+      "group": "Dock",
+      "fbx": "Dock/Dock_T2.fbx",
+      "source": "Dock/Sources~/Dock_T2.blend",
+      "triangles": 4380,
+      "vertices": 2264,
+      "dimensionsBlenderXYZ": [
+        6.92,
+        5.397,
+        3.76
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "Warehouse_T2",
+      "group": "Warehouse",
+      "fbx": "Warehouse/Warehouse_T2.fbx",
+      "source": "Warehouse/Sources~/Warehouse_T2.blend",
+      "triangles": 7468,
+      "vertices": 3876,
+      "dimensionsBlenderXYZ": [
+        6.804,
+        4.755,
+        4.575
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Fuel_T2",
+      "group": "Fuel",
+      "fbx": "Fuel/Fuel_T2.fbx",
+      "source": "Fuel/Sources~/Fuel_T2.blend",
+      "triangles": 3284,
+      "vertices": 1710,
+      "dimensionsBlenderXYZ": [
+        3.92,
+        3.23,
+        3.305
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Office_T2",
+      "group": "Office",
+      "fbx": "Office/Office_T2.fbx",
+      "source": "Office/Sources~/Office_T2.blend",
+      "triangles": 8674,
+      "vertices": 4510,
+      "dimensionsBlenderXYZ": [
+        5.209,
+        3.87,
+        4.955
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "Repair_T2",
+      "group": "Repair",
+      "fbx": "Repair/Repair_T2.fbx",
+      "source": "Repair/Sources~/Repair_T2.blend",
+      "triangles": 4960,
+      "vertices": 2574,
+      "dimensionsBlenderXYZ": [
+        4.727,
+        3.94,
+        3.805
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "CoastalFreighter",
+      "group": "Freighter",
+      "fbx": "Freighter/CoastalFreighter.fbx",
+      "source": "Freighter/Sources~/CoastalFreighter.blend",
+      "triangles": 5600,
+      "vertices": 2908,
+      "dimensionsBlenderXYZ": [
+        2.631,
+        6.29,
+        3.458
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "Cargo_Grain",
+      "group": "Cargo_Grain",
+      "fbx": "Cargo_Grain/Cargo_Grain.fbx",
+      "source": "Cargo_Grain/Sources~/Cargo_Grain.blend",
+      "triangles": 1080,
+      "vertices": 570,
+      "dimensionsBlenderXYZ": [
+        1.5,
+        1.35,
+        1.41
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Cargo_Textiles",
+      "group": "Cargo_Textiles",
+      "fbx": "Cargo_Textiles/Cargo_Textiles.fbx",
+      "source": "Cargo_Textiles/Sources~/Cargo_Textiles.blend",
+      "triangles": 1836,
+      "vertices": 952,
+      "dimensionsBlenderXYZ": [
+        1.5,
+        1.35,
+        0.975
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Cargo_MachineParts",
+      "group": "Cargo_MachineParts",
+      "fbx": "Cargo_MachineParts/Cargo_MachineParts.fbx",
+      "source": "Cargo_MachineParts/Sources~/Cargo_MachineParts.blend",
+      "triangles": 2292,
+      "vertices": 1184,
+      "dimensionsBlenderXYZ": [
+        1.5,
+        1.35,
+        1.39
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Bollard",
+      "group": "Props",
+      "fbx": "Props/Bollard.fbx",
+      "source": "Props/Sources~/Bollard.blend",
+      "triangles": 196,
+      "vertices": 104,
+      "dimensionsBlenderXYZ": [
+        0.52,
+        0.52,
+        0.465
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Barrel",
+      "group": "Props",
+      "fbx": "Props/Barrel.fbx",
+      "source": "Props/Sources~/Barrel.blend",
+      "triangles": 176,
+      "vertices": 96,
+      "dimensionsBlenderXYZ": [
+        0.68,
+        0.68,
+        0.92
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Crate",
+      "group": "Props",
+      "fbx": "Props/Crate.fbx",
+      "source": "Props/Sources~/Crate.blend",
+      "triangles": 648,
+      "vertices": 336,
+      "dimensionsBlenderXYZ": [
+        1.0,
+        1.075,
+        1.0
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Container",
+      "group": "Props",
+      "fbx": "Props/Container.fbx",
+      "source": "Props/Sources~/Container.blend",
+      "triangles": 1512,
+      "vertices": 784,
+      "dimensionsBlenderXYZ": [
+        2.7,
+        1.42,
+        1.5
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "HarborLamp",
+      "group": "Props",
+      "fbx": "Props/HarborLamp.fbx",
+      "source": "Props/Sources~/HarborLamp.blend",
+      "triangles": 698,
+      "vertices": 365,
+      "dimensionsBlenderXYZ": [
+        0.74,
+        0.74,
+        2.6
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Fence",
+      "group": "Props",
+      "fbx": "Props/Fence.fbx",
+      "source": "Props/Sources~/Fence.blend",
+      "triangles": 432,
+      "vertices": 224,
+      "dimensionsBlenderXYZ": [
+        2.15,
+        0.15,
+        1.1
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "RockCluster",
+      "group": "Coast",
+      "fbx": "Coast/RockCluster.fbx",
+      "source": "Coast/Sources~/RockCluster.blend",
+      "triangles": 60,
+      "vertices": 36,
+      "dimensionsBlenderXYZ": [
+        2.216,
+        1.386,
+        1.3
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "CoastalPine",
+      "group": "Vegetation",
+      "fbx": "Vegetation/CoastalPine.fbx",
+      "source": "Vegetation/Sources~/CoastalPine.blend",
+      "triangles": 60,
+      "vertices": 38,
+      "dimensionsBlenderXYZ": [
+        1.95,
+        1.901,
+        3.0
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "CoastTile",
+      "group": "Coast",
+      "fbx": "Coast/CoastTile.fbx",
+      "source": "Coast/Sources~/CoastTile.blend",
+      "triangles": 132,
+      "vertices": 72,
+      "dimensionsBlenderXYZ": [
+        10.0,
+        10.0,
+        1.63
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "QuayTile",
+      "group": "Coast",
+      "fbx": "Coast/QuayTile.fbx",
+      "source": "Coast/Sources~/QuayTile.blend",
+      "triangles": 1944,
+      "vertices": 1008,
+      "dimensionsBlenderXYZ": [
+        4.12,
+        4.12,
+        0.55
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Map_BeaconBay",
+      "group": "MapMarkers",
+      "fbx": "MapMarkers/Map_BeaconBay.fbx",
+      "source": "MapMarkers/Sources~/Map_BeaconBay.blend",
+      "triangles": 150,
+      "vertices": 85,
+      "dimensionsBlenderXYZ": [
+        1.902,
+        2.0,
+        2.26
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Map_Copperport",
+      "group": "MapMarkers",
+      "fbx": "MapMarkers/Map_Copperport.fbx",
+      "source": "MapMarkers/Sources~/Map_Copperport.blend",
+      "triangles": 2204,
+      "vertices": 1146,
+      "dimensionsBlenderXYZ": [
+        1.902,
+        2.0,
+        1.705
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Map_MeridianQuay",
+      "group": "MapMarkers",
+      "fbx": "MapMarkers/Map_MeridianQuay.fbx",
+      "source": "MapMarkers/Sources~/Map_MeridianQuay.blend",
+      "triangles": 2204,
+      "vertices": 1146,
+      "dimensionsBlenderXYZ": [
+        1.902,
+        2.0,
+        2.655
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "FX_Selection",
+      "group": "Effects",
+      "fbx": "Effects/FX_Selection.fbx",
+      "source": "Effects/Sources~/FX_Selection.blend",
+      "triangles": 240,
+      "vertices": 120,
+      "dimensionsBlenderXYZ": [
+        2.07,
+        2.07,
+        0.061
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "FX_Wake",
+      "group": "Effects",
+      "fbx": "Effects/FX_Wake.fbx",
+      "source": "Effects/Sources~/FX_Wake.blend",
+      "triangles": 28,
+      "vertices": 42,
+      "dimensionsBlenderXYZ": [
+        2.14,
+        3.34,
+        0.0
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "FX_Arrival",
+      "group": "Effects",
+      "fbx": "Effects/FX_Arrival.fbx",
+      "source": "Effects/Sources~/FX_Arrival.blend",
+      "triangles": 720,
+      "vertices": 360,
+      "dimensionsBlenderXYZ": [
+        1.584,
+        1.584,
+        0.051
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "FX_Upgrade",
+      "group": "Effects",
+      "fbx": "Effects/FX_Upgrade.fbx",
+      "source": "Effects/Sources~/FX_Upgrade.blend",
+      "triangles": 240,
+      "vertices": 144,
+      "dimensionsBlenderXYZ": [
+        2.001,
+        2.001,
+        0.004
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "FX_Loading",
+      "group": "Effects",
+      "fbx": "Effects/FX_Loading.fbx",
+      "source": "Effects/Sources~/FX_Loading.blend",
+      "triangles": 648,
+      "vertices": 336,
+      "dimensionsBlenderXYZ": [
+        0.618,
+        0.659,
+        0.6
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "FX_DamageSmoke",
+      "group": "Effects",
+      "fbx": "Effects/FX_DamageSmoke.fbx",
+      "source": "Effects/Sources~/FX_DamageSmoke.blend",
+      "triangles": 100,
+      "vertices": 60,
+      "dimensionsBlenderXYZ": [
+        0.663,
+        0.381,
+        1.384
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "Icon_Storm",
+      "group": "Icons",
+      "fbx": "Icons/Icon_Storm.fbx",
+      "source": "Icons/Sources~/Icon_Storm.blend",
+      "triangles": 289,
+      "vertices": 157,
+      "dimensionsBlenderXYZ": [
+        1.6,
+        1.6,
+        0.5
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "Icon_Pirates",
+      "group": "Icons",
+      "fbx": "Icons/Icon_Pirates.fbx",
+      "source": "Icons/Sources~/Icon_Pirates.blend",
+      "triangles": 380,
+      "vertices": 202,
+      "dimensionsBlenderXYZ": [
+        1.6,
+        1.6,
+        0.51
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "Icon_EngineFault",
+      "group": "Icons",
+      "fbx": "Icons/Icon_EngineFault.fbx",
+      "source": "Icons/Sources~/Icon_EngineFault.blend",
+      "triangles": 1148,
+      "vertices": 592,
+      "dimensionsBlenderXYZ": [
+        1.6,
+        1.6,
+        0.363
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "Icon_Congestion",
+      "group": "Icons",
+      "fbx": "Icons/Icon_Congestion.fbx",
+      "source": "Icons/Sources~/Icon_Congestion.blend",
+      "triangles": 428,
+      "vertices": 228,
+      "dimensionsBlenderXYZ": [
+        1.6,
+        1.6,
+        0.33
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "Icon_Inspection",
+      "group": "Icons",
+      "fbx": "Icons/Icon_Inspection.fbx",
+      "source": "Icons/Sources~/Icon_Inspection.blend",
+      "triangles": 824,
+      "vertices": 424,
+      "dimensionsBlenderXYZ": [
+        1.6,
+        1.6,
+        0.415
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "Icon_Credits",
+      "group": "Icons",
+      "fbx": "Icons/Icon_Credits.fbx",
+      "source": "Icons/Sources~/Icon_Credits.blend",
+      "triangles": 644,
+      "vertices": 328,
+      "dimensionsBlenderXYZ": [
+        1.6,
+        1.6,
+        0.402
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Icon_Reputation",
+      "group": "Icons",
+      "fbx": "Icons/Icon_Reputation.fbx",
+      "source": "Icons/Sources~/Icon_Reputation.blend",
+      "triangles": 52,
+      "vertices": 34,
+      "dimensionsBlenderXYZ": [
+        1.6,
+        1.6,
+        0.3
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Icon_Suspicion",
+      "group": "Icons",
+      "fbx": "Icons/Icon_Suspicion.fbx",
+      "source": "Icons/Sources~/Icon_Suspicion.blend",
+      "triangles": 181,
+      "vertices": 99,
+      "dimensionsBlenderXYZ": [
+        1.6,
+        1.6,
+        0.345
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "baked transform / blendshape clip"
+    },
+    {
+      "name": "Icon_Permit",
+      "group": "Icons",
+      "fbx": "Icons/Icon_Permit.fbx",
+      "source": "Icons/Sources~/Icon_Permit.blend",
+      "triangles": 512,
+      "vertices": 268,
+      "dimensionsBlenderXYZ": [
+        1.6,
+        1.6,
+        0.38
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "Icon_Route",
+      "group": "Icons",
+      "fbx": "Icons/Icon_Route.fbx",
+      "source": "Icons/Sources~/Icon_Route.blend",
+      "triangles": 260,
+      "vertices": 140,
+      "dimensionsBlenderXYZ": [
+        1.6,
+        1.6,
+        0.31
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": false,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "static"
+    },
+    {
+      "name": "OceanSurface",
+      "group": "Water",
+      "fbx": "Water/OceanSurface.fbx",
+      "source": "Water/Sources~/OceanSurface.blend",
+      "triangles": 8192,
+      "vertices": 4225,
+      "dimensionsBlenderXYZ": [
+        32.0,
+        32.0,
+        0.398
+      ],
+      "animatedFBX": false,
+      "sourceAnimated": true,
+      "frames": null,
+      "fps": 30,
+      "unityAnimation": "shader"
+    },
+    {
+      "name": "ShoreFoam",
+      "group": "Water",
+      "fbx": "Water/ShoreFoam.fbx",
+      "source": "Water/Sources~/ShoreFoam.blend",
+      "triangles": 216,
+      "vertices": 432,
+      "dimensionsBlenderXYZ": [
+        10.2,
+        10.2,
+        0
+      ],
+      "animatedFBX": true,
+      "sourceAnimated": true,
+      "frames": [
+        1,
+        121
+      ],
+      "fps": 30,
+      "unityAnimation": "TidalWash loop"
+    }
+  ]
+}

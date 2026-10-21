@@ -1,7 +1,7 @@
 # Open Waters - two-tier prototype implementation plan
 
 **Document date:** 2026-10-20 (Asia/Karachi)  
-**Status:** Planning baseline; gameplay implementation has not started in this checkout.  
+**Status:** Gameplay implementation authorized and started on 2026-10-20; actual verification is tracked in `progression.md`.  
 **Target:** A complete, replayable 5-8 minute 3D top-down/isometric demo with **one base tier and one upgraded tier**.  
 **Companion files:** `AGENTS.md` governs agent workflow; `progression.md` tracks implementation and handoffs.
 
@@ -13,7 +13,7 @@ Read the complete supplied game pitch, plan a prototype with a single level of u
 
 The user explicitly describes a **3D top-view game similar in presentation to Clash of Clans**. Interpret this as a 3D port viewed from an elevated, angled camera with readable structures and visible growth. The pitch supplies the maritime trade and business-risk identity.
 
-This task creates planning documents, not the playable game. Future implementation should follow a subsequent implementation request and the tracker.
+The original task created planning documents. On 2026-10-20 the user authorized implementation of all steps after asset delivery. Follow the tracker for actual completion evidence.
 
 ### 1.2 Sources reviewed in full
 
@@ -380,6 +380,10 @@ Design generous buttons and non-hover-only information for future touch support.
 
 ### 9.3 Required screens and panels
 
+User playtest revision (2026-10-20): present one current decision in compact floating panels, with optional tips and expandable financial/rules details. Keep essential costs and risk consequences visible; hide explanations and historical logs until requested. Make world selection and the next relevant port structure visibly highlighted. Start desktop builds at the detected display resolution in fullscreen, with persisted Fullscreen / Borderless (windowed fullscreen) settings and a Windowed recovery option. Reuse one replaceable branding PNG for menu, HUD and app icons; suppress the default engine splash where supported by the installed editor/license. Gameplay scope and economy stay unchanged.
+
+Use consistent pictograms alongside short labels for warehouse, dock, shipment, operations, GSA, fuel, repairs, routes, upgrades and settings. Icons should aid recognition while labels preserve clarity. A ship underway must fully leave the camera view and stay hidden offshore, then animate slowly back to the berth; it becomes selectable only after docking.
+
 | Surface | Required content |
 |---|---|
 | Main menu | New Run, Continue if valid save, Settings, Credits, Quit where supported |
@@ -496,6 +500,8 @@ UI commands request changes; validated services mutate state and produce events/
 
 Author immutable ScriptableObject definitions with stable string IDs:
 
+Implementation note (2026-10-20): the compact demo authors these immutable definition rows together in `Assets/OpenWaters/Data/Demo.asset` (`DemoDefinitions`) so balance and content can be reviewed in one Inspector. Runtime state retains string IDs and never mutates that asset. This replaces separate files per definition without changing counts, effects or tier constraints.
+
 - `PortTierDefinition`: tier, warehouse capacity, range, repair modifiers, building variants.
 - `ShipDefinition`: ID, capacity, prefab reference, presentation speeds.
 - `CargoDefinition`: ID, name, icon, visual prefab.
@@ -565,7 +571,7 @@ These are initial budgets, not measured performance claims. Record test hardware
 | Memory | Investigate sustained runtime memory above 500 MB; no growth across five new runs |
 | Draw calls | Aim below 150 in the harbor; profile actual URP passes rather than guessing |
 | Visible geometry | Aim below 250k triangles for the compact harbor |
-| Web payload | Aim below 80 MB compressed; record actual build/download size |
+| Web payload | Original general budget: below 80 MB compressed. Website integration proposes ≤15 MB initial compressed payload and measured 5–10 second startup gates; see website planning amendment below. Neither target is measured release evidence. |
 | Scene responsiveness | No noticeable stalls during selection, event opening, or tier change |
 | Visuals | One primary directional light, limited shadows, simple water, restrained particles |
 
@@ -731,6 +737,8 @@ Expected implementation deliverables:
 
 Creating packages does not by itself authorize publishing or uploading them.
 
+Website planning amendment (2026-10-20): the user supplied sibling `OpenWaters-Web-repo` and requested a comprehensive plan only for a Founders Play Demo button, background preparation and a complete browser package housed in that repository. Canonical proposal: `../OpenWaters-Web-repo/docs/browser-demo-plan.md`. Use a stable same-origin player with immutable versioned assets, production Web build optimization, progressive prefetch and verified cache reuse. Proposed timing gates are ≤10 seconds cold immediate-click and ≤5 seconds prefetched/cached on an explicitly defined desktop/network profile; unrestricted connection speed cannot be guaranteed. The earlier 80 MB general budget does not establish this timing target. All WEB.1–WEB.8 implementation, packaging, testing and publishing remain TODO and require later authorization; no game scope changes. Record decision D13 in the tracker.
+
 ## 17. Agent execution and handoff contract
 
 Use `progression.md` as the live source of implementation status:
@@ -742,3 +750,11 @@ Use `progression.md` as the live source of implementation status:
 - At **10% remaining usage or lower**: stop all implementation and work only on handoff notes, as required by `AGENTS.md`.
 
 The tracker must let another agent continue without reading the whole conversation. Preserve source interpretation, decisions, unfinished edits, command results, and next actions. Planned features must never be presented as implemented features.
+
+### Art production ordering amendment - 2026-10-20
+
+The user requests model and animation production before gameplay. Begin asset-only M7 work now, retaining all gameplay dependencies and acceptance gates. Deliver assets under `Assets/Models` with named subfolders. Art direction: original chunky low-poly maritime forms inspired by the readability and visible growth of Clash of Clans, viewed at 45-degree yaw / 55-degree downward pitch. Animated water is a priority: coherent directional swells and designed foam detail using an economical URP shader; no expensive realtime reflections. This does not expand playable tiers, ship count, or destination scenes.
+
+Website implementation amendment (2026-10-20): user now authorizes implementing the browser demo plan and preparing files for their GitHub push. Add a distinct production Brotli/DiskSizeLTO single-thread Web builder, preserve managed stripping/company/product/save identifiers, and bridge first menu/harbor frame and pause/save flush. Website uses the stable same-origin player and versioned complete package described in the canonical plan. Hosted performance gates remain evidence-based and unproven until measured; no deployment/push performed by the agent.
+
+Production optimization decision (2026-10-21): initial DiskSizeLTO attempt never produced a completed artifact and no process remains. Use Unity DiskSize without LTO for the next production candidate; keep Brotli/single-thread/no-development settings and measure actual package size. This changes compiler optimization only; the15MB/loading goals and gameplay scope remain unchanged.

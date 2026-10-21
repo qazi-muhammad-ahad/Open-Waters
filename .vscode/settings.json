@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Open-Waters.slnx"
+    "dotnet.defaultSolution": "Open-Waters-repo.slnx"
 }

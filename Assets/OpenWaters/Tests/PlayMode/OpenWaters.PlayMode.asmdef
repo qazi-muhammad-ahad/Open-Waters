@@ -1,0 +1,5 @@
+{
+  "name": "OpenWaters.PlayMode",
+  "references": ["OpenWaters.Runtime", "Unity.ugui", "Unity.InputSystem"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

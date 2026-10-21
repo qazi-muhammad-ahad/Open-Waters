@@ -1,0 +1,5 @@
+Unity 6000.3.23f1
+Rendered 2 isometric frames at clip sample times 0 and 1 seconds.
+Preview Animation components: 21; clips with varying curves: 6.
+Water shader renders on graphics device: AMD Radeon RX 5600 XT.
+This is editor render validation, not a player build or gameplay test.

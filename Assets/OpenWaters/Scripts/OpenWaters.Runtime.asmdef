@@ -1,0 +1,5 @@
+{
+  "name": "OpenWaters.Runtime",
+  "rootNamespace": "OpenWaters",
+  "references": ["Unity.InputSystem", "Unity.ugui"]
+}

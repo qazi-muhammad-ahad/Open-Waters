@@ -1,0 +1,289 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4be6fc99e5329429ec15e359f577fa, type: 3}
+  m_Name: Demo
+  m_EditorClassIdentifier: OpenWaters.Runtime::OpenWaters.DemoDefinitions
+  startingCredits: 200
+  startingReputation: 50
+  upgradeCost: 300
+  shipCapacity: 20
+  deliveryReputation: 5
+  cleanBonus: 40
+  cleanReputation: 5
+  minorFine: 60
+  minorReputation: -10
+  majorFine: 180
+  majorReputation: -20
+  serviceSeconds: 3
+  checkpointSeconds: 5
+  tiers:
+  - tier: 1
+    capacity: 10
+    range: 1
+    repairFee: 40
+    repairDelay: 10
+    dockDelay: 20
+    buildings:
+    - {fileID: 2762515398465346379, guid: 0fa1485c84a2e4b47969b816d19f3192, type: 3}
+    - {fileID: 8591846787911014848, guid: 6e4697932addeaf43b64863b93070aaa, type: 3}
+    - {fileID: 6168262847331692747, guid: fc0226342c5fc9e40a7e951d188a1965, type: 3}
+    - {fileID: 2706233137487106205, guid: d19c27f048eda134c8946fe22b8d3749, type: 3}
+    - {fileID: 6129092986104843601, guid: 1f840ccd18377fd47ae5425fc6304ee4, type: 3}
+  - tier: 2
+    capacity: 20
+    range: 2
+    repairFee: 20
+    repairDelay: 5
+    dockDelay: 10
+    buildings:
+    - {fileID: 3096343671145404403, guid: 455b778c2d8d77a479ffabd2c7edd27b, type: 3}
+    - {fileID: 6557223654627313666, guid: 1a47be81f4a0c264b853df371f3a756e, type: 3}
+    - {fileID: 8712010798730653213, guid: 2bcc922b6e5550f459a0d1ece634fb70, type: 3}
+    - {fileID: 9130399147204325358, guid: 81dbeb84f6feacb4d99b2f31253afa82, type: 3}
+    - {fileID: 8875620603598727717, guid: 0b866291c0667db49bfea3ed5fe9ea3a, type: 3}
+  cargos:
+  - id: grain
+    title: Grain
+    icon: {fileID: 7231990778009029441, guid: 3463e24ad0dca2d4d998f35f42483ae7, type: 3}
+    prefab: {fileID: 347695236725313560, guid: 8d2f7459fba3d984889c08221a16686d, type: 3}
+  - id: textiles
+    title: Textiles
+    icon: {fileID: 4251466418524082880, guid: cfd97a61b2ee3b746b839e0bbc5b19e7, type: 3}
+    prefab: {fileID: 6129046034839994208, guid: 52d9f87aa9bec994aaf98f31e1468b88, type: 3}
+  - id: parts
+    title: Machine parts
+    icon: {fileID: -2880509077682672571, guid: 0d189335e75fe564d972103a1f79be71, type: 3}
+    prefab: {fileID: 6591515168128932566, guid: 47e65335896ed264e8adcd26f6f7e722, type: 3}
+  contracts:
+  - id: grain_beacon
+    destination: Beacon Bay
+    cargoId: grain
+    units: 10
+    tier: 1
+    range: 1
+    reward: 300
+  - id: textiles_copper
+    destination: Copperport
+    cargoId: textiles
+    units: 16
+    tier: 2
+    range: 2
+    reward: 360
+  - id: parts_meridian
+    destination: Meridian Quay
+    cargoId: parts
+    units: 20
+    tier: 2
+    range: 2
+    reward: 400
+  routes:
+  - id: beacon_coastal
+    title: Coastal passage
+    contractId: grain_beacon
+    eventId: 
+    cost: 50
+    seconds: 35
+  - id: copper_sheltered
+    title: Sheltered passage
+    contractId: textiles_copper
+    eventId: congestion
+    cost: 80
+    seconds: 55
+  - id: copper_exposed
+    title: Exposed passage
+    contractId: textiles_copper
+    eventId: storm
+    cost: 60
+    seconds: 40
+  - id: meridian_patrolled
+    title: Patrolled passage
+    contractId: parts_meridian
+    eventId: engine
+    cost: 80
+    seconds: 55
+  - id: meridian_shortcut
+    title: Short passage
+    contractId: parts_meridian
+    eventId: pirates
+    cost: 60
+    seconds: 40
+  events:
+  - id: storm
+    title: Storm ahead
+    description: A squall crosses the exposed passage. Protect the hull or keep your
+      schedule.
+    choices:
+    - id: detour
+      title: Detour
+      description: +15 travel seconds. No fee or damage.
+      fee: 0
+      bonus: 0
+      damage: 0
+      reputation: 0
+      suspicion: 0
+      severity: 0
+      travelDelay: 15
+      dockDelay: 0
+      useRepairModifiers: 0
+    - id: push
+      title: Push through
+      description: 30 deducted at delivery; hull -20 until service.
+      fee: 30
+      bonus: 0
+      damage: 20
+      reputation: 0
+      suspicion: 0
+      severity: 0
+      travelDelay: 0
+      dockDelay: 0
+      useRepairModifiers: 0
+  - id: pirates
+    title: Unprotected waters
+    description: Reports of pirates along the shortcut. Choose a guarded passage
+      or pay for an escort.
+    choices:
+    - id: detour
+      title: Guarded detour
+      description: +15 travel seconds; no fee.
+      fee: 0
+      bonus: 0
+      damage: 0
+      reputation: 0
+      suspicion: 0
+      severity: 0
+      travelDelay: 15
+      dockDelay: 0
+      useRepairModifiers: 0
+    - id: escort
+      title: Hire escort
+      description: 50 deducted at delivery; no delay.
+      fee: 50
+      bonus: 0
+      damage: 0
+      reputation: 0
+      suspicion: 0
+      severity: 0
+      travelDelay: 0
+      dockDelay: 0
+      useRepairModifiers: 0
+  - id: engine
+    title: Engine fault
+    description: A pump needs attention. Your upgraded repair team reduces repair
+      costs and delay.
+    choices:
+    - id: repair
+      title: Repair now
+      description: 'Tier 2: 20 deducted at delivery; +5 travel seconds. Tier 1: 40
+        / +10s.'
+      fee: 0
+      bonus: 0
+      damage: 0
+      reputation: 0
+      suspicion: 0
+      severity: 0
+      travelDelay: 0
+      dockDelay: 0
+      useRepairModifiers: 1
+    - id: limp
+      title: Limp home
+      description: 'No fee; hull -20. Tier 2: +10 dock-service seconds (Tier 1: +20).'
+      fee: 0
+      bonus: 0
+      damage: 20
+      reputation: 0
+      suspicion: 0
+      severity: 0
+      travelDelay: 0
+      dockDelay: -1
+      useRepairModifiers: 0
+  - id: congestion
+    title: Port congestion
+    description: Copperport has a queue for its berths. Wait or purchase a priority
+      slot.
+    choices:
+    - id: wait
+      title: Wait
+      description: +15 travel seconds; no fee.
+      fee: 0
+      bonus: 0
+      damage: 0
+      reputation: 0
+      suspicion: 0
+      severity: 0
+      travelDelay: 15
+      dockDelay: 0
+      useRepairModifiers: 0
+    - id: priority
+      title: Pay priority
+      description: 30 deducted at delivery; no delay.
+      fee: 30
+      bonus: 0
+      damage: 0
+      reputation: 0
+      suspicion: 0
+      severity: 0
+      travelDelay: 0
+      dockDelay: 0
+      useRepairModifiers: 0
+  - id: inspection
+    title: GSA documentation check
+    description: A premium offer has paperwork discrepancies. The legitimate base
+      contract remains payable. A scheduled GSA review follows delivery.
+    choices:
+    - id: clean
+      title: Decline premium; regularize paperwork
+      description: Base payout. No fee, suspicion or reputation penalty.
+      fee: 0
+      bonus: 0
+      damage: 0
+      reputation: 0
+      suspicion: 0
+      severity: 0
+      travelDelay: 0
+      dockDelay: 0
+      useRepairModifiers: 0
+    - id: fee
+      title: Pay unofficial fee
+      description: '+160 bonus, -40 fee at delivery. Suspicion +25, reputation -5.
+        Minor violation: review fine 60, reputation -10 / Watch.'
+      fee: 40
+      bonus: 160
+      damage: 0
+      reputation: -5
+      suspicion: 25
+      severity: 1
+      travelDelay: 0
+      dockDelay: 0
+      useRepairModifiers: 0
+    - id: risk
+      title: Risk shipment
+      description: '+240 bonus at delivery. Suspicion +50, reputation -10. Major
+        violation: review fine 180, reputation -20 / Restricted.'
+      fee: 0
+      bonus: 240
+      damage: 0
+      reputation: -10
+      suspicion: 50
+      severity: 2
+      travelDelay: 0
+      dockDelay: 0
+      useRepairModifiers: 0
+  ship: {fileID: 3578366387796599805, guid: 0f046a62e46721f4283e5000aaf12bc8, type: 3}
+  coast: {fileID: 4070345168407900013, guid: 8ab3cce17ea91db42adf36a41aa56d41, type: 3}
+  ocean: {fileID: 1313984553169386003, guid: 9a7be11c45173744db6edf23b65deae2, type: 3}
+  foam: {fileID: 1901167849231351127, guid: c1bfe0a52a425b64087cd2ae3c477818, type: 3}
+  wake: {fileID: 8138439691563709978, guid: 3f33420afb0bccc4da797b3be86cb82b, type: 3}
+  damage: {fileID: 2200951154281669770, guid: 03bab2e22d9165d4fbf9f8c1e8efc87e, type: 3}
+  selection: {fileID: 235804808748462951, guid: adf1ac6854a579c4d98b3858d2709d9e, type: 3}
+  upgrade: {fileID: 6981833777470045663, guid: 4191dd358d1546646b2a5e0b79afe69d, type: 3}
+  loading: {fileID: 2732271523558640832, guid: 49b71b9d9f7e40c48b597611d548a226, type: 3}
+  arrival: {fileID: 7452701421256502288, guid: 2acc7862042b10545b3c818456873181, type: 3}
